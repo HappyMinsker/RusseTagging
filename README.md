@@ -28,48 +28,60 @@ A Python program to add, read, and modify metadata tags for video files, similar
 
 ## Usage
 
-### Basic Commands
+### Batch Processing (Recommended)
+
+**Process all videos in input directory:**
+```bash
+python batch_video_tagger.py --process-all
+```
+
+**Check directory status:**
+```bash
+python batch_video_tagger.py --status
+```
+
+### Individual Video Commands
 
 **Read metadata from a video file:**
 ```bash
-python video_tagger.py "100 Common Russian phrases for natural conversation #3.mp4" --read
+python simple_video_tagger.py "video.mp4" --read
 ```
 
 **Add a single metadata tag:**
 ```bash
-python video_tagger.py "video.mp4" --add title "My Video Title"
+python simple_video_tagger.py "video.mp4" --add title "My Video Title"
 ```
 
 **Add multiple metadata tags:**
 ```bash
-python video_tagger.py "video.mp4" --add title "My Video Title" --add artist "John Doe" --add year "2024"
+python simple_video_tagger.py "video.mp4" --add title "My Video Title" --add artist "John Doe" --add year "2024"
 ```
 
 **Remove a specific tag:**
 ```bash
-python video_tagger.py "video.mp4" --remove title
+python simple_video_tagger.py "video.mp4" --remove title
 ```
 
 **Clear all metadata:**
 ```bash
-python video_tagger.py "video.mp4" --clear
+python simple_video_tagger.py "video.mp4" --clear
 ```
 
 **Show video information:**
 ```bash
-python video_tagger.py "video.mp4" --info
+python simple_video_tagger.py "video.mp4" --info
 ```
 
 ### Batch Operations
 
 **Load metadata from JSON file:**
 ```bash
-python video_tagger.py "video.mp4" --batch sample_metadata.json
+python simple_video_tagger.py "video.mp4" --batch sample_metadata.json
 ```
 
 **Save to a new file (preserve original):**
 ```bash
-python video_tagger.py "video.mp4" --batch sample_metadata.json --output "video_tagged.mp4"
+python simple_video_tagger.py "video.mp4" --batch sample_metadata.json --output "video_tagged.mp4"
 ```
 
 ### Common Metadata Tags
